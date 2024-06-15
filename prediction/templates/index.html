@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review System</title>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAl1JREFUSEvtlUuITmEYx39jDCO3ERaTSMpiXBpKJFlYDGVBZGSmpigLTMqtKEsLJbeQLEgWKJeUGQvZSSEbM7Fg4xKRNISVy/D+v/6n3t7O+b40mbH4ns15z3ku/+f9P5dTwxBJzRDhUgUeNOarVP83VI8A5gDfgBfAjwqZ1QEzgDFAD/CzyL6oxh3ANmABMNzOXwLwfuA00J8ErAV2AAeAUdYpyfvAXuBBmkAe8CWgrczNbgPrzILMxgM3gGWRjxIbFr0fA3bFMVNgZS0jSZ/Pj4FpwD5gqnWPgKU+PwzAzT6/Ag65LAuBnU5M6nbgcgYeAyvzt8BoQAHmA5+iLCcF6ruBRf521mXY6Pd7wGonnLlNBp4Cen4GmoD3UsbArcAVe6w1fSnj9cBNoCVR3ALk8z2nRJ3AKX/fHFg7lwKLyoM2mJhkHseb4I7NaH9pqtV8eSJ7lU2yBziSAu8OY3DYBo0ZJTmRGkJzPQGmWPcmMDUL+FoAPDew0WudGqzUQzHVKwFRJlkPXM0JpLkW1StyqF5TMOfqgfO2Xw7cSYHVVO8CFWOB18C8pLlEfxew2EFEmRLPxuSum0tNlMl0l2Uc8NEslfogHaftwAl7ffBZ46QAqo+ekouAloxEc7/B52fA0bB85LvE85756OYXsozyFoiCauaK5JqBftlAm+06sKqMzxlga6wvWpmbQnNt8crUBtImEpXHXePfCYhsVGMtDJVC71qZWpUn8/ql0v94ZHCaHRh4Hq3IMhcrqdQjM93Jf/2TqBR8wPpKNx4wQFGAKvA/ozYNXKV60Kj+AxvVaR9IM0N4AAAAAElFTkSuQmCC"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="{% static 'js/scriptl.js' %}" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="headArea">
+        <div class="titleName">
+          <h1 class="mainTitle">Review System . . .</h1>
+        </div>
+
+        <div class="searchBox">
+          <input type="text" class="searchArea" placeholder="Enter Item Name" />
+          <button class="bx bx-search" onclick="search()"></button>
+          <button class="bx bx-home" onclick="renderItems()"></button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="itemsArea"></div>
+    </div>
+    <script id="item-data" type="application/json">
+      {{ item_data_json|safe }}
+    </script>
+  </body>
+</html>

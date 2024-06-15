@@ -1,0 +1,7 @@
+mansithummar67/flipkart-product-review-dataset
+niraliivaghani/flipkart-product-customer-reviews-dataset
+tarkkaanko/amazon
+yeshmesh/inconsistent-and-consistent-amazon-reviews
+nehaprabhavalkar/indian-products-on-amazon
+jocelyndumlao/consumer-review-of-clothing-product
+dineshpiyasamara/sentiment-analysis-dataset
